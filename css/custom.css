@@ -1,5 +1,5 @@
 /* =====================================================
-   SNAPS MICROSYSTEMS - MODERN DARK THEME
+   NCHOOLWE P. SINAMPANDE - MODERN DARK THEME
    Premium Dark UI with Glassmorphism & Gradients
    ===================================================== */
 
@@ -51,7 +51,7 @@ html {
 }
 
 #mainNav .navbar-logo {
-    height: 45px;
+    height: 55px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -525,7 +525,7 @@ footer a:hover {
     }
 
     #mainNav .navbar-logo {
-        height: 35px;
+        height: 42px;
     }
 }
 
@@ -545,7 +545,7 @@ footer a:hover {
     }
 
     #mainNav .navbar-logo {
-        height: 30px;
+        height: 35px;
     }
 }
 
