@@ -1,0 +1,22 @@
+<svg width="320" height="72" viewBox="0 0 320 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon -->
+  <path d="M36 8C26.06 8 18 15.82 18 25.5C18 38.75 36 56 36 56C36 56 54 38.75 54 25.5C54 15.82 45.94 8 36 8Z" fill="url(#grad1)"/>
+  <circle cx="36" cy="25" r="10" fill="#0f0f1a"/>
+  <path d="M32 25L35 28L41 22" stroke="#0ea5e9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Text -->
+  <text x="72" y="38" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="26" font-weight="700" fill="#ffffff">Snaps </text>
+  <text x="144" y="38" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="26" font-weight="700" fill="url(#grad2)">Microsystems</text>
+  <text x="72" y="54" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9" font-weight="600" letter-spacing="3" fill="#94a3b8">GEOSPATIAL TECHNOLOGY</text>
+  
+  <defs>
+    <linearGradient id="grad1" x1="18" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="144" y1="20" x2="290" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+</svg>

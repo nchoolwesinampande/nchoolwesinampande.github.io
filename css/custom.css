@@ -1,0 +1,569 @@
+/* =====================================================
+   SNAPS MICROSYSTEMS - MODERN DARK THEME
+   Premium Dark UI with Glassmorphism & Gradients
+   ===================================================== */
+
+/* CSS Variables */
+:root {
+    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #0ea5e9 100%);
+    --accent-color: #10b981;
+    --bg-dark: #0f0f1a;
+    --bg-card: #1a1a2e;
+    --bg-card-hover: #252542;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --glass-bg: rgba(26, 26, 46, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glow-purple: rgba(99, 102, 241, 0.5);
+    --glow-blue: rgba(14, 165, 233, 0.5);
+}
+
+/* Global Styles */
+body {
+    background-color: var(--bg-dark) !important;
+    color: var(--text-primary) !important;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: #6366f1;
+    color: white;
+}
+
+/* =====================================================
+   NAVBAR - Glassmorphism Effect
+   ===================================================== */
+#mainNav {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+    padding: 0.5rem 0 !important;
+}
+
+#mainNav .navbar-brand {
+    padding: 0;
+}
+
+#mainNav .navbar-logo {
+    height: 45px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+#mainNav .navbar-logo:hover {
+    transform: scale(1.02);
+}
+
+#mainNav .nav-link {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.25rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#mainNav .nav-link:hover {
+    color: var(--text-primary) !important;
+    background: rgba(99, 102, 241, 0.15);
+}
+
+#mainNav.navbar-shrink {
+    background: rgba(15, 15, 26, 0.95) !important;
+}
+
+/* =====================================================
+   HERO / MASTHEAD
+   ===================================================== */
+.masthead {
+    background: linear-gradient(135deg, rgba(15, 15, 26, 0.85) 0%, rgba(26, 26, 46, 0.85) 100%),
+        url('../images/hero-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.masthead::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
+    animation: float 20s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-1%, 2%) rotate(-1deg);
+    }
+}
+
+.masthead .container {
+    position: relative;
+    z-index: 1;
+}
+
+.masthead h1 {
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: none !important;
+    line-height: 1.3 !important;
+    min-height: 4.5rem;
+}
+
+/* Typing Animation Cursor */
+.typing-cursor {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: blink 0.7s infinite;
+    font-weight: 300;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.masthead p {
+    color: var(--text-secondary) !important;
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important;
+    max-width: 700px;
+    margin: 0 auto 2rem !important;
+}
+
+/* Hero Name Highlight */
+.hero-name {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.masthead .divider {
+    background: var(--primary-gradient) !important;
+    height: 4px !important;
+    width: 80px !important;
+    margin: 1.5rem auto !important;
+    border-radius: 2px;
+    border: none !important;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+.btn-primary {
+    background: var(--primary-gradient) !important;
+    border: none !important;
+    padding: 1rem 2.5rem !important;
+    font-weight: 600 !important;
+    border-radius: 50px !important;
+    transition: all 0.4s ease !important;
+    box-shadow: 0 4px 25px var(--glow-purple);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 35px var(--glow-purple);
+}
+
+.btn-light {
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--glass-border) !important;
+    color: var(--text-primary) !important;
+    padding: 1rem 2.5rem !important;
+    font-weight: 600 !important;
+    border-radius: 50px !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease !important;
+}
+
+.btn-light:hover {
+    background: rgba(99, 102, 241, 0.2) !important;
+    border-color: #6366f1 !important;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   ABOUT SECTION
+   ===================================================== */
+.page-section.bg-primary {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+    position: relative;
+    padding: 6rem 0 !important;
+}
+
+.page-section.bg-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--primary-gradient);
+}
+
+.page-section.bg-primary h2 {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+}
+
+.page-section.bg-primary .text-white-50,
+.page-section.bg-primary .text-white-75 {
+    color: var(--text-secondary) !important;
+}
+
+.page-section.bg-primary .divider.light {
+    background: var(--primary-gradient) !important;
+    height: 4px !important;
+    width: 80px !important;
+    border-radius: 2px;
+}
+
+/* =====================================================
+   SERVICES SECTION - 4 Column Cards
+   ===================================================== */
+#services {
+    background: var(--bg-dark) !important;
+    padding: 6rem 0 !important;
+}
+
+#services h2 {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+    margin-bottom: 1rem !important;
+}
+
+#services .divider {
+    background: var(--primary-gradient) !important;
+    height: 4px !important;
+    width: 80px !important;
+    margin: 0 auto 3rem !important;
+    border-radius: 2px;
+}
+
+#services .col-lg-3>.mt-5 {
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 2rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--glass-border);
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+#services .col-lg-3>.mt-5:hover {
+    transform: translateY(-10px);
+    background: var(--bg-card-hover);
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.15);
+}
+
+#services .fas,
+#services .fab {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: transform 0.3s ease;
+}
+
+#services .col-lg-3:hover .fas,
+#services .col-lg-3:hover .fab {
+    transform: scale(1.1);
+}
+
+#services h3 {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    margin-top: 1rem !important;
+    font-size: 1.1rem !important;
+}
+
+#services .service-tagline {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+#services ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+#services li {
+    color: var(--text-secondary) !important;
+    padding: 0.35rem 0;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+#services li i {
+    color: var(--accent-color) !important;
+    -webkit-text-fill-color: var(--accent-color) !important;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    font-size: 0.8rem;
+}
+
+/* =====================================================
+   PORTFOLIO SECTION
+   ===================================================== */
+#portfolio {
+    background: var(--bg-dark) !important;
+    padding: 4rem 0 !important;
+}
+
+#portfolio h2 {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+}
+
+.portfolio-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 16px;
+    margin: 8px;
+}
+
+.portfolio-box img {
+    transition: transform 0.5s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box-caption {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.9) 0%, rgba(14, 165, 233, 0.9) 100%) !important;
+    opacity: 0;
+    transition: all 0.4s ease;
+    border-radius: 16px;
+}
+
+.portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+}
+
+.portfolio-box-caption .project-category {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.portfolio-box-caption .project-name {
+    color: white !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* =====================================================
+   CTA SECTION
+   ===================================================== */
+.page-section.bg-dark {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-section.bg-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.page-section.bg-dark h2 {
+    color: var(--text-primary) !important;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.page-section.bg-dark .text-white-75 {
+    color: var(--text-secondary) !important;
+}
+
+/* =====================================================
+   CONTACT SECTION
+   ===================================================== */
+#contact {
+    background: var(--bg-dark) !important;
+    padding: 6rem 0 !important;
+}
+
+#contact h2 {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+}
+
+#contact h5 {
+    color: var(--text-primary) !important;
+    margin-top: 0.5rem;
+}
+
+#contact .divider {
+    background: var(--primary-gradient) !important;
+    height: 4px !important;
+    width: 80px !important;
+    border-radius: 2px;
+}
+
+#contact .text-muted {
+    color: var(--text-secondary) !important;
+}
+
+#contact .fas,
+#contact .fab {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#contact a {
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease;
+}
+
+#contact a:hover {
+    color: #6366f1 !important;
+    text-decoration: none !important;
+}
+
+#contact div {
+    color: var(--text-secondary);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+footer.bg-light {
+    background: var(--bg-card) !important;
+    border-top: 1px solid var(--glass-border);
+}
+
+footer .text-muted {
+    color: var(--text-secondary) !important;
+}
+
+footer a {
+    color: var(--text-secondary) !important;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #6366f1 !important;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 992px) {
+    .masthead h1 {
+        font-size: 2rem !important;
+        min-height: 3.5rem;
+    }
+
+    #mainNav .navbar-collapse {
+        background: var(--bg-card);
+        border-radius: 16px;
+        padding: 1rem;
+        margin-top: 1rem;
+        border: 1px solid var(--glass-border);
+    }
+
+    #mainNav .navbar-logo {
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .masthead h1 {
+        font-size: 1.5rem !important;
+        min-height: 3rem;
+    }
+
+    .masthead p {
+        font-size: 1rem !important;
+    }
+
+    .btn-primary,
+    .btn-light {
+        padding: 0.875rem 2rem !important;
+    }
+
+    #mainNav .navbar-logo {
+        height: 30px;
+    }
+}
+
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.masthead .container>.row {
+    animation: fadeInUp 1s ease-out;
+}
