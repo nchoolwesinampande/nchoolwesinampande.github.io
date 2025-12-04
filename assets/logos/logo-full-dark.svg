@@ -4,7 +4,7 @@
   <circle cx="40" cy="27" r="11" fill="#0f0f1a"/>
   <path d="M35 27L38.5 31L46 23" stroke="#0ea5e9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   
-  <!-- Text - Name (larger) -->
+  <!-- Text - Name (white-blue gradient) -->
   <text x="76" y="38" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="26" font-weight="700" fill="url(#grad2)">Nchoolwe P. Sinampande</text>
   <text x="76" y="58" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="500" letter-spacing="2.5" fill="#94a3b8">GEOSPATIAL • IM CONSULTANT</text>
   
@@ -13,9 +13,11 @@
       <stop stop-color="#6366f1"/>
       <stop offset="1" stop-color="#0ea5e9"/>
     </linearGradient>
+    <!-- White to blue gradient for name -->
     <linearGradient id="grad2" x1="76" y1="20" x2="380" y2="45" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#6366f1"/>
-      <stop offset="1" stop-color="#0ea5e9"/>
+      <stop stop-color="#ffffff"/>
+      <stop offset="0.5" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#38bdf8"/>
     </linearGradient>
   </defs>
 </svg>
