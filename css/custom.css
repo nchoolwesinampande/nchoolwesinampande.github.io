@@ -1,21 +1,21 @@
 /* =====================================================
-   NCHOOLWE P. SINAMPANDE - MODERN DARK THEME
-   Premium Dark UI with Glassmorphism & Gradients
+   NCHOOLWE P. SINAMPANDE - APPLE DARK THEME
+   Premium Dark UI with Apple Aesthetics
    ===================================================== */
 
-/* CSS Variables */
+/* CSS Variables - Apple Dark Mode Color Palette */
 :root {
-    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #0ea5e9 100%);
-    --accent-color: #10b981;
-    --bg-dark: #0f0f1a;
-    --bg-card: #1a1a2e;
-    --bg-card-hover: #252542;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --glass-bg: rgba(26, 26, 46, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glow-purple: rgba(99, 102, 241, 0.5);
-    --glow-blue: rgba(14, 165, 233, 0.5);
+    --primary-gradient: linear-gradient(135deg, #0071e3 0%, #40c8ff 100%);
+    --accent-color: #0a84ff;
+    --bg-dark: #000000;
+    --bg-card: #1c1c1e;
+    --bg-card-hover: #2c2c2e;
+    --text-primary: #f5f5f7;
+    --text-secondary: #86868b;
+    --glass-bg: rgba(28, 28, 30, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glow-blue: rgba(10, 132, 255, 0.4);
+    --glow-light: rgba(10, 132, 255, 0.25);
 }
 
 /* Global Styles */
@@ -30,17 +30,17 @@ html {
 }
 
 ::selection {
-    background: #6366f1;
+    background: #0a84ff;
     color: white;
 }
 
 /* =====================================================
-   NAVBAR - Glassmorphism Effect
+   NAVBAR - Apple Dark Frosted Glass
    ===================================================== */
 #mainNav {
     background: var(--glass-bg) !important;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
     border-bottom: 1px solid var(--glass-border);
     transition: all 0.3s ease;
     padding: 0.5rem 0 !important;
@@ -71,63 +71,170 @@ html {
 
 #mainNav .nav-link:hover {
     color: var(--text-primary) !important;
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 #mainNav.navbar-shrink {
-    background: rgba(15, 15, 26, 0.95) !important;
+    background: rgba(0, 0, 0, 0.9) !important;
 }
 
 /* =====================================================
-   HERO / MASTHEAD
+   HERO / MASTHEAD - Apple Dark Style with Carousel
    ===================================================== */
 .masthead {
-    background: linear-gradient(135deg, rgba(15, 15, 26, 0.85) 0%, rgba(26, 26, 46, 0.85) 100%),
-        url('../images/hero-bg.png') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
     position: relative;
+    width: 100vw;
     min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
+    background: #000000;
+    margin: 0;
+    padding: 0;
 }
 
-.masthead::before {
-    content: '';
+/* Hero Background Carousel */
+#heroBackgroundCarousel {
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background:
-        radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
-    animation: float 20s ease-in-out infinite;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 0;
 }
 
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-
-    50% {
-        transform: translate(-1%, 2%) rotate(-1deg);
-    }
+#heroBackgroundCarousel .carousel-inner {
+    width: 100%;
+    height: 100%;
 }
 
-.masthead .container {
+#heroBackgroundCarousel .carousel-item {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* Hero Slide Background */
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Dark overlay for better text readability */
+.hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.hero-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.1) 40%,
+            rgba(0, 0, 0, 0.3) 70%,
+            rgba(0, 0, 0, 0.5) 100%);
+    z-index: 2;
+}
+
+#heroBackgroundCarousel .carousel-indicators {
+    z-index: 10;
+    bottom: 30px;
+}
+
+#heroBackgroundCarousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+}
+
+#heroBackgroundCarousel .carousel-indicators li.active {
+    background-color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+#heroBackgroundCarousel .carousel-control-prev,
+#heroBackgroundCarousel .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(28, 28, 30, 0.6);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.masthead:hover #heroBackgroundCarousel .carousel-control-prev,
+.masthead:hover #heroBackgroundCarousel .carousel-control-next {
+    opacity: 1;
+}
+
+#heroBackgroundCarousel .carousel-control-prev {
+    left: 30px;
+}
+
+#heroBackgroundCarousel .carousel-control-next {
+    right: 30px;
+}
+
+#heroBackgroundCarousel .carousel-control-prev:hover,
+#heroBackgroundCarousel .carousel-control-next:hover {
+    background: var(--accent-color);
+}
+
+/* Hero Content Overlay */
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content .container {
     position: relative;
     z-index: 1;
 }
 
+.hero-content p {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
 .masthead h1 {
     font-size: 2.8rem !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     background: var(--primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -135,6 +242,7 @@ html {
     text-transform: none !important;
     line-height: 1.3 !important;
     min-height: 4.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 /* Typing Animation Cursor */
@@ -174,7 +282,7 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .masthead .divider {
@@ -187,45 +295,46 @@ html {
 }
 
 /* =====================================================
-   BUTTONS
+   BUTTONS - Apple Dark Style
    ===================================================== */
 .btn-primary {
-    background: var(--primary-gradient) !important;
+    background: var(--accent-color) !important;
     border: none !important;
     padding: 1rem 2.5rem !important;
-    font-weight: 600 !important;
-    border-radius: 50px !important;
+    font-weight: 500 !important;
+    border-radius: 980px !important;
     transition: all 0.4s ease !important;
-    box-shadow: 0 4px 25px var(--glow-purple);
+    box-shadow: 0 4px 20px var(--glow-light);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 35px var(--glow-purple);
+    background: #409cff !important;
+    transform: scale(1.02);
+    box-shadow: 0 6px 30px var(--glow-blue);
 }
 
 .btn-light {
-    background: var(--glass-bg) !important;
-    border: 1px solid var(--glass-border) !important;
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
     color: var(--text-primary) !important;
     padding: 1rem 2.5rem !important;
-    font-weight: 600 !important;
-    border-radius: 50px !important;
+    font-weight: 500 !important;
+    border-radius: 980px !important;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease !important;
 }
 
 .btn-light:hover {
-    background: rgba(99, 102, 241, 0.2) !important;
-    border-color: #6366f1 !important;
-    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    transform: scale(1.02);
 }
 
 /* =====================================================
-   ABOUT SECTION
+   ABOUT SECTION - Apple Dark Style
    ===================================================== */
 .page-section.bg-primary {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+    background: #1c1c1e !important;
     position: relative;
     padding: 6rem 0 !important;
 }
@@ -237,12 +346,12 @@ html {
     left: 0;
     right: 0;
     height: 1px;
-    background: var(--primary-gradient);
+    background: linear-gradient(90deg, transparent, rgba(10, 132, 255, 0.5), transparent);
 }
 
 .page-section.bg-primary h2 {
     color: var(--text-primary) !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
 }
 
 .page-section.bg-primary .text-white-50,
@@ -258,7 +367,7 @@ html {
 }
 
 /* =====================================================
-   SERVICES SECTION - 4 Column Cards
+   SERVICES SECTION - Apple Dark Style Cards
    ===================================================== */
 #services {
     background: var(--bg-dark) !important;
@@ -267,7 +376,7 @@ html {
 
 #services h2 {
     color: var(--text-primary) !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     margin-bottom: 1rem !important;
 }
 
@@ -291,10 +400,10 @@ html {
 }
 
 #services .col-lg-3>.mt-5:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     background: var(--bg-card-hover);
-    border-color: rgba(99, 102, 241, 0.3);
-    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.15);
+    border-color: rgba(10, 132, 255, 0.3);
+    box-shadow: 0 20px 50px rgba(10, 132, 255, 0.15);
 }
 
 #services .fas,
@@ -321,7 +430,7 @@ html {
 #services .service-tagline {
     color: var(--text-secondary);
     font-size: 0.85rem;
-    font-style: italic;
+    font-style: normal;
     margin-bottom: 1rem;
 }
 
@@ -349,7 +458,7 @@ html {
 }
 
 /* =====================================================
-   PORTFOLIO SECTION
+   PORTFOLIO SECTION - Apple Dark Style
    ===================================================== */
 #portfolio {
     background: var(--bg-dark) !important;
@@ -358,7 +467,7 @@ html {
 
 #portfolio h2 {
     color: var(--text-primary) !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
 }
 
 .portfolio-box {
@@ -374,11 +483,11 @@ html {
 }
 
 .portfolio-box:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .portfolio-box-caption {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.9) 0%, rgba(14, 165, 233, 0.9) 100%) !important;
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.9) 0%, rgba(64, 200, 255, 0.9) 100%) !important;
     opacity: 0;
     transition: all 0.4s ease;
     border-radius: 16px;
@@ -403,10 +512,10 @@ html {
 }
 
 /* =====================================================
-   CTA SECTION
+   CTA SECTION - Apple Dark Style
    ===================================================== */
 .page-section.bg-dark {
-    background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%) !important;
+    background: #1c1c1e !important;
     position: relative;
     overflow: hidden;
 }
@@ -419,14 +528,14 @@ html {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 70% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 30% 50%, rgba(10, 132, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(64, 200, 255, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
 .page-section.bg-dark h2 {
     color: var(--text-primary) !important;
-    font-weight: 700;
+    font-weight: 600;
     position: relative;
     z-index: 1;
 }
@@ -436,7 +545,7 @@ html {
 }
 
 /* =====================================================
-   CONTACT SECTION
+   CONTACT SECTION - Apple Dark Style
    ===================================================== */
 #contact {
     background: var(--bg-dark) !important;
@@ -445,7 +554,7 @@ html {
 
 #contact h2 {
     color: var(--text-primary) !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
 }
 
 #contact h5 {
@@ -473,12 +582,12 @@ html {
 }
 
 #contact a {
-    color: var(--text-primary) !important;
+    color: var(--accent-color) !important;
     transition: all 0.3s ease;
 }
 
 #contact a:hover {
-    color: #6366f1 !important;
+    color: #409cff !important;
     text-decoration: none !important;
 }
 
@@ -487,7 +596,7 @@ html {
 }
 
 /* =====================================================
-   FOOTER
+   FOOTER - Apple Dark Style
    ===================================================== */
 footer.bg-light {
     background: var(--bg-card) !important;
@@ -504,7 +613,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #6366f1 !important;
+    color: var(--accent-color) !important;
 }
 
 /* =====================================================
@@ -566,16 +675,149 @@ footer a:hover {
 
 .masthead .container>.row {
     animation: fadeInUp 1s ease-out;
-}/* Mobile hamburger menu icon */
+}
+
+/* Mobile hamburger menu icon */
 #mainNav .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
     padding: 0.5rem;
 }
 
 #mainNav .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(241, 245, 249, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(245, 245, 247, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 #mainNav .navbar-toggler:focus {
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.3);
+}
+
+/* =====================================================
+   CAROUSEL SECTION - Apple Dark Style
+   ===================================================== */
+.carousel-section {
+    background: var(--bg-dark) !important;
+    padding: 5rem 0 !important;
+}
+
+.carousel-section h2 {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+.carousel-section .divider {
+    background: var(--primary-gradient) !important;
+    height: 4px !important;
+    width: 80px !important;
+    margin: 0 auto 2rem !important;
+    border-radius: 2px;
+}
+
+#showcaseCarousel {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(10, 132, 255, 0.2);
+}
+
+#showcaseCarousel .carousel-inner {
+    border-radius: 20px;
+}
+
+#showcaseCarousel .carousel-item img {
+    border-radius: 20px;
+    object-fit: cover;
+    height: 500px;
+}
+
+#showcaseCarousel .carousel-caption {
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3rem 2rem 2rem;
+    border-radius: 0 0 20px 20px;
+}
+
+#showcaseCarousel .carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+#showcaseCarousel .carousel-caption p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+#showcaseCarousel .carousel-indicators {
+    bottom: 1.5rem;
+}
+
+#showcaseCarousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+}
+
+#showcaseCarousel .carousel-indicators li.active {
+    background-color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+#showcaseCarousel .carousel-control-prev,
+#showcaseCarousel .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(28, 28, 30, 0.8);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#showcaseCarousel:hover .carousel-control-prev,
+#showcaseCarousel:hover .carousel-control-next {
+    opacity: 1;
+}
+
+#showcaseCarousel .carousel-control-prev {
+    left: 20px;
+}
+
+#showcaseCarousel .carousel-control-next {
+    right: 20px;
+}
+
+#showcaseCarousel .carousel-control-prev:hover,
+#showcaseCarousel .carousel-control-next:hover {
+    background: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    #showcaseCarousel .carousel-item img {
+        height: 300px;
+    }
+
+    #showcaseCarousel .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+
+    #showcaseCarousel .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    #showcaseCarousel .carousel-control-prev,
+    #showcaseCarousel .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        opacity: 1;
+    }
 }
