@@ -48,6 +48,12 @@
                     <li class="nav-item"><a class="nav-link"
                             href="https://www.linkedin.com/in/nchoolwe-sinampande-948a3b1a8/" target="_blank"><i
                                 class="fab fa-linkedin"></i></a></li>
+                    <li class="nav-item">
+                        <button class="theme-toggle nav-link" id="themeToggle" title="Toggle Dark/Light Mode">
+                            <i class="fas fa-sun" id="lightIcon"></i>
+                            <i class="fas fa-moon" id="darkIcon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -419,6 +425,38 @@
                 document.addEventListener('DOMContentLoaded', typeAnimation);
             } else {
                 typeAnimation();
+            }
+        })();
+    </script>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        (function () {
+            const themeToggle = document.getElementById('themeToggle');
+            const html = document.documentElement;
+            const body = document.body;
+
+            // Check for saved theme preference or default to dark
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            setTheme(savedTheme);
+
+            themeToggle.addEventListener('click', function () {
+                const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+
+            function setTheme(theme) {
+                if (theme === 'light') {
+                    body.classList.add('light-mode');
+                    document.getElementById('lightIcon').style.display = 'none';
+                    document.getElementById('darkIcon').style.display = 'inline-block';
+                } else {
+                    body.classList.remove('light-mode');
+                    document.getElementById('lightIcon').style.display = 'inline-block';
+                    document.getElementById('darkIcon').style.display = 'none';
+                }
             }
         })();
     </script>
