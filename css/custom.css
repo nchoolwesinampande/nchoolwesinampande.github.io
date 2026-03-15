@@ -5,37 +5,43 @@
 
 /* CSS Variables - Dark Mode (Default) */
 :root {
-    --primary: #00d4aa;
-    --primary-dim: rgba(0, 212, 170, 0.15);
-    --primary-glow: rgba(0, 212, 170, 0.4);
-    --accent: #f0a030;
-    --accent-dim: rgba(240, 160, 48, 0.12);
-    --bg-dark: #0a0e14;
+    --primary: #5b9cf5;
+    --primary-dim: rgba(91, 156, 245, 0.1);
+    --primary-glow: rgba(91, 156, 245, 0.25);
+    --accent: #e8a44a;
+    --accent-dim: rgba(232, 164, 74, 0.1);
+    --highlight: #7ec8e3;
+    --bg-dark: #0b0f15;
     --bg-surface: #111820;
     --bg-card: #151c26;
     --bg-card-hover: #1a2332;
     --text-primary: #e6edf3;
-    --text-secondary: #7d8a9a;
-    --text-dim: #4a5568;
+    --text-secondary: #8793a5;
+    --text-dim: #4f5b6b;
     --glass-bg: rgba(15, 22, 32, 0.85);
-    --glass-border: rgba(0, 212, 170, 0.08);
-    --border-subtle: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --border-subtle: rgba(255, 255, 255, 0.05);
     --font-display: 'Sora', sans-serif;
     --font-body: 'Outfit', sans-serif;
 }
 
 /* Light Mode Variables */
 body.light-mode {
-    --bg-dark: #f8f9fb;
+    --primary: #3b7fdb;
+    --primary-dim: rgba(59, 127, 219, 0.08);
+    --primary-glow: rgba(59, 127, 219, 0.2);
+    --accent: #d4903a;
+    --highlight: #3b7fdb;
+    --bg-dark: #f7f8fa;
     --bg-surface: #ffffff;
-    --bg-card: #f0f2f5;
-    --bg-card-hover: #e8ebf0;
-    --text-primary: #0a0e14;
+    --bg-card: #f2f3f6;
+    --bg-card-hover: #e9ebef;
+    --text-primary: #101520;
     --text-secondary: #5a6577;
     --text-dim: #8a95a5;
-    --glass-bg: rgba(248, 249, 251, 0.9);
+    --glass-bg: rgba(247, 248, 250, 0.92);
     --glass-border: rgba(0, 0, 0, 0.06);
-    --border-subtle: rgba(0, 0, 0, 0.06);
+    --border-subtle: rgba(0, 0, 0, 0.05);
 }
 
 /* =====================================================
@@ -61,11 +67,20 @@ html {
 
 ::selection {
     background: var(--primary);
-    color: var(--bg-dark);
+    color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display) !important;
+}
+
+/* Override Bootstrap's .text-primary green */
+.text-primary,
+.text-primary.mb-4,
+svg.text-primary,
+.svg-inline--fa.text-primary {
+    color: var(--primary) !important;
+    fill: var(--primary);
 }
 
 /* Noise grain overlay */
@@ -78,7 +93,7 @@ body::after {
     height: 100%;
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.025;
+    opacity: 0.02;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 256px 256px;
@@ -115,7 +130,7 @@ body::after {
 }
 
 .theme-toggle:hover i {
-    color: var(--primary);
+    color: var(--accent);
 }
 
 #darkIcon {
@@ -151,22 +166,22 @@ body::after {
 #mainNav .nav-link {
     color: var(--text-secondary) !important;
     font-weight: 500;
-    font-size: 0.85rem;
-    letter-spacing: 0.03em;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
     padding: 0.5rem 1rem !important;
-    margin: 0 0.15rem;
+    margin: 0 0.1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
     text-transform: uppercase;
 }
 
 #mainNav .nav-link:hover {
-    color: var(--primary) !important;
-    background: var(--primary-dim);
+    color: var(--text-primary) !important;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 #mainNav.navbar-shrink {
-    background: rgba(10, 14, 20, 0.95) !important;
+    background: rgba(11, 15, 21, 0.95) !important;
 }
 
 /* =====================================================
@@ -185,7 +200,7 @@ body::after {
     padding: 0;
 }
 
-/* Topographic grid decoration */
+/* Subtle grid decoration */
 .masthead::before {
     content: '';
     position: absolute;
@@ -194,11 +209,10 @@ body::after {
     right: 0;
     bottom: 0;
     background-image:
-        linear-gradient(var(--border-subtle) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
     background-size: 80px 80px;
     z-index: 1;
-    opacity: 0.4;
     pointer-events: none;
 }
 
@@ -238,7 +252,6 @@ body::after {
     background-repeat: no-repeat;
 }
 
-/* Dark overlay with teal tint */
 .hero-slide::before {
     content: '';
     position: absolute;
@@ -246,7 +259,7 @@ body::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 14, 20, 0.65);
+    background: rgba(11, 15, 21, 0.6);
     z-index: 1;
 }
 
@@ -258,11 +271,10 @@ body::after {
     right: 0;
     bottom: 0;
     background: linear-gradient(180deg,
-            rgba(10, 14, 20, 0.3) 0%,
+            rgba(11, 15, 21, 0.3) 0%,
             transparent 30%,
             transparent 60%,
-            rgba(10, 14, 20, 0.8) 100%),
-        radial-gradient(ellipse at 20% 80%, rgba(0, 212, 170, 0.06) 0%, transparent 60%);
+            rgba(11, 15, 21, 0.85) 100%);
     z-index: 2;
 }
 
@@ -282,7 +294,7 @@ body::after {
 }
 
 #heroBackgroundCarousel .carousel-indicators li.active {
-    background-color: var(--primary);
+    background-color: var(--accent);
     width: 44px;
 }
 
@@ -292,8 +304,8 @@ body::after {
     height: 48px;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 212, 170, 0.1);
-    border: 1px solid rgba(0, 212, 170, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 12px;
     opacity: 0;
     transition: all 0.3s ease;
@@ -315,8 +327,8 @@ body::after {
 
 #heroBackgroundCarousel .carousel-control-prev:hover,
 #heroBackgroundCarousel .carousel-control-next:hover {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 /* Hero Content Overlay */
@@ -342,8 +354,8 @@ body::after {
     font-family: var(--font-display) !important;
     font-size: 3.2rem !important;
     font-weight: 700 !important;
-    color: var(--primary) !important;
-    -webkit-text-fill-color: var(--primary) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
     text-transform: none !important;
     line-height: 1.2 !important;
     min-height: 4.5rem;
@@ -364,7 +376,7 @@ body::after {
 }
 
 .masthead p {
-    color: var(--text-secondary) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
     font-size: 1.05rem !important;
     line-height: 1.9 !important;
     max-width: 650px;
@@ -378,31 +390,19 @@ body::after {
 
 /* Hero Name Highlight */
 .hero-name {
-    color: var(--primary) !important;
-    -webkit-text-fill-color: var(--primary) !important;
+    color: var(--highlight) !important;
+    -webkit-text-fill-color: var(--highlight) !important;
     font-weight: 600;
-    position: relative;
-}
-
-.hero-name::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--primary);
-    opacity: 0.3;
 }
 
 .masthead .divider {
-    background: var(--primary) !important;
+    background: var(--accent) !important;
     height: 2px !important;
-    width: 60px !important;
+    width: 50px !important;
     margin: 1.5rem auto !important;
     border-radius: 1px;
     border: none !important;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 /* =====================================================
@@ -410,34 +410,34 @@ body::after {
    ===================================================== */
 .btn-primary {
     background: var(--primary) !important;
-    color: var(--bg-dark) !important;
+    color: #ffffff !important;
     border: none !important;
     padding: 0.875rem 2.5rem !important;
     font-weight: 600 !important;
     font-family: var(--font-display) !important;
-    font-size: 0.85rem !important;
+    font-size: 0.82rem !important;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     border-radius: 6px !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 4px 20px var(--primary-dim);
+    box-shadow: 0 4px 16px var(--primary-dim);
 }
 
 .btn-primary:hover {
-    background: #00e8b8 !important;
+    background: #7ab3ff !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px var(--primary-glow);
-    color: var(--bg-dark) !important;
+    box-shadow: 0 8px 28px var(--primary-glow);
+    color: #ffffff !important;
 }
 
 .btn-light {
     background: transparent !important;
-    border: 1px solid var(--primary) !important;
-    color: var(--primary) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: var(--text-primary) !important;
     padding: 0.875rem 2.5rem !important;
     font-weight: 600 !important;
     font-family: var(--font-display) !important;
-    font-size: 0.85rem !important;
+    font-size: 0.82rem !important;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     border-radius: 6px !important;
@@ -445,10 +445,10 @@ body::after {
 }
 
 .btn-light:hover {
-    background: var(--primary) !important;
-    color: var(--bg-dark) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px var(--primary-glow);
 }
 
 /* =====================================================
@@ -458,15 +458,14 @@ body::after {
     position: relative;
 }
 
-/* Section label style */
+/* Section heading style */
 .page-section h2,
 #portfolio h2 {
     font-family: var(--font-display) !important;
-    font-size: 0.8rem !important;
+    font-size: 2rem !important;
     font-weight: 600 !important;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--primary) !important;
+    letter-spacing: -0.02em;
+    color: var(--text-primary) !important;
 }
 
 /* Scroll reveal animation */
@@ -497,14 +496,14 @@ body::after {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--primary), transparent);
-    opacity: 0.3;
+    background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
 }
 
 .page-section.bg-primary h2 {
-    color: var(--primary) !important;
+    color: var(--text-primary) !important;
 }
 
+.page-section.bg-primary .text-white,
 .page-section.bg-primary .text-white-50,
 .page-section.bg-primary .text-white-75 {
     color: var(--text-secondary) !important;
@@ -514,9 +513,9 @@ body::after {
 }
 
 .page-section.bg-primary .divider.light {
-    background: var(--primary) !important;
+    background: var(--accent) !important;
     height: 2px !important;
-    width: 60px !important;
+    width: 50px !important;
     border-radius: 1px;
     opacity: 0.5;
 }
@@ -530,7 +529,7 @@ body::after {
     position: relative;
 }
 
-/* Topographic decoration left */
+/* Decorative circles */
 #services::before {
     content: '';
     position: absolute;
@@ -538,7 +537,7 @@ body::after {
     left: -5%;
     width: 300px;
     height: 300px;
-    border: 1px solid rgba(0, 212, 170, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.02);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -550,20 +549,20 @@ body::after {
     left: -3%;
     width: 220px;
     height: 220px;
-    border: 1px solid rgba(0, 212, 170, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.015);
     border-radius: 50%;
     pointer-events: none;
 }
 
 #services h2 {
-    color: var(--primary) !important;
+    color: var(--text-primary) !important;
     margin-bottom: 0.5rem !important;
 }
 
 #services .divider {
-    background: var(--primary) !important;
+    background: var(--accent) !important;
     height: 2px !important;
-    width: 60px !important;
+    width: 50px !important;
     margin: 0 auto 3.5rem !important;
     border-radius: 1px;
     opacity: 0.5;
@@ -572,7 +571,7 @@ body::after {
 #services .col-lg-3 > .mt-5 {
     background: var(--bg-card);
     border-radius: 16px;
-    padding: 2.5rem 2rem !important;
+    padding: 2.5rem 1.8rem !important;
     margin-top: 0 !important;
     margin-bottom: 1.5rem;
     border: 1px solid var(--border-subtle);
@@ -582,7 +581,7 @@ body::after {
     overflow: hidden;
 }
 
-/* Hover glow line at top */
+/* Hover accent line at top */
 #services .col-lg-3 > .mt-5::before {
     content: '';
     position: absolute;
@@ -591,7 +590,7 @@ body::after {
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background: var(--primary);
+    background: var(--accent);
     transition: width 0.4s ease;
 }
 
@@ -602,8 +601,8 @@ body::after {
 #services .col-lg-3 > .mt-5:hover {
     transform: translateY(-6px);
     background: var(--bg-card-hover);
-    border-color: rgba(0, 212, 170, 0.15);
-    box-shadow: 0 20px 60px rgba(0, 212, 170, 0.08);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 #services .fas,
@@ -628,10 +627,10 @@ body::after {
 
 #services .service-tagline {
     color: var(--accent);
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-style: normal;
     font-weight: 500;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-bottom: 1.2rem;
 }
@@ -653,19 +652,30 @@ body::after {
 }
 
 #services li i {
-    color: var(--primary) !important;
-    -webkit-text-fill-color: var(--primary) !important;
+    color: var(--text-dim) !important;
+    -webkit-text-fill-color: var(--text-dim) !important;
     margin-top: 0.2rem;
     flex-shrink: 0;
-    font-size: 0.75rem;
-    opacity: 0.7;
+    font-size: 0.7rem;
+}
+
+/* Fix card spacing on all screens */
+#services .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#services .col-lg-3 {
+    padding: 0 12px;
+    margin-bottom: 24px;
+    display: flex;
 }
 
 /* =====================================================
    PORTFOLIO SECTION
    ===================================================== */
 #portfolio {
-    background: var(--bg-dark) !important;
+    background: var(--bg-surface) !important;
     padding: 5rem 0 !important;
     position: relative;
 }
@@ -681,7 +691,7 @@ body::after {
 }
 
 #portfolio h2 {
-    color: var(--primary) !important;
+    color: var(--text-primary) !important;
 }
 
 .portfolio-box {
@@ -689,13 +699,14 @@ body::after {
     display: block;
     overflow: hidden;
     border-radius: 12px;
-    margin: 6px;
+    margin: 8px;
     border: 1px solid var(--border-subtle);
-    transition: border-color 0.4s ease;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .portfolio-box:hover {
-    border-color: rgba(0, 212, 170, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 .portfolio-box img {
@@ -703,12 +714,12 @@ body::after {
 }
 
 .portfolio-box:hover img {
-    transform: scale(1.06);
-    filter: brightness(0.7);
+    transform: scale(1.05);
+    filter: brightness(0.6);
 }
 
 .portfolio-box-caption {
-    background: linear-gradient(180deg, transparent 0%, rgba(10, 14, 20, 0.95) 100%) !important;
+    background: linear-gradient(180deg, transparent 0%, rgba(11, 15, 21, 0.95) 100%) !important;
     opacity: 0;
     transition: all 0.4s ease;
     border-radius: 12px;
@@ -723,7 +734,7 @@ body::after {
 }
 
 .portfolio-box-caption .project-category {
-    color: var(--primary) !important;
+    color: var(--accent) !important;
     font-family: var(--font-display);
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -732,7 +743,7 @@ body::after {
 }
 
 .portfolio-box-caption .project-name {
-    color: var(--text-primary) !important;
+    color: #ffffff !important;
     font-family: var(--font-display);
     font-size: 1rem;
     font-weight: 500;
@@ -740,13 +751,24 @@ body::after {
     letter-spacing: -0.01em;
 }
 
+/* Portfolio grid spacing */
+#portfolio .row {
+    margin: 0 -4px;
+}
+
+#portfolio .col-lg-4,
+#portfolio .col-sm-6 {
+    padding: 4px;
+}
+
 /* =====================================================
    CTA SECTION - CV Download
    ===================================================== */
 .page-section.bg-dark {
-    background: var(--bg-surface) !important;
+    background: var(--bg-dark) !important;
     position: relative;
     overflow: hidden;
+    padding: 6rem 0;
 }
 
 .page-section.bg-dark::before {
@@ -755,10 +777,10 @@ body::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 212, 170, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.02);
     pointer-events: none;
 }
 
@@ -768,10 +790,10 @@ body::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 212, 170, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.015);
     pointer-events: none;
 }
 
@@ -793,7 +815,7 @@ body::after {
    CONTACT SECTION
    ===================================================== */
 #contact {
-    background: var(--bg-dark) !important;
+    background: var(--bg-surface) !important;
     padding: 7rem 0 !important;
     position: relative;
 }
@@ -805,27 +827,25 @@ body::after {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--primary), transparent);
-    opacity: 0.2;
+    background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
 }
 
 #contact h2 {
-    color: var(--primary) !important;
+    color: var(--text-primary) !important;
 }
 
 #contact h5 {
     color: var(--text-primary) !important;
     font-weight: 600;
     font-size: 0.9rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    letter-spacing: 0.03em;
     margin-top: 0.8rem;
 }
 
 #contact .divider {
-    background: var(--primary) !important;
+    background: var(--accent) !important;
     height: 2px !important;
-    width: 60px !important;
+    width: 50px !important;
     border-radius: 1px;
     opacity: 0.5;
 }
@@ -857,19 +877,20 @@ body::after {
     color: var(--text-secondary);
 }
 
-/* Contact cards */
+/* Contact card spacing */
 #contact .col-lg-3 {
     position: relative;
+    padding: 0 2rem;
 }
 
 #contact .col-lg-3::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 15%;
     right: 0;
-    height: 60%;
+    height: 70%;
     width: 1px;
-    background: linear-gradient(180deg, transparent, var(--border-subtle), transparent);
+    background: var(--border-subtle);
 }
 
 #contact .col-lg-3:last-child::after {
@@ -880,7 +901,7 @@ body::after {
    FOOTER
    ===================================================== */
 footer.bg-light {
-    background: var(--bg-surface) !important;
+    background: var(--bg-dark) !important;
     border-top: 1px solid var(--border-subtle);
 }
 
@@ -900,7 +921,7 @@ footer a:hover {
 }
 
 /* =====================================================
-   SCROLL REVEAL ANIMATIONS
+   ANIMATIONS
    ===================================================== */
 @keyframes fadeInUp {
     from {
@@ -915,18 +936,6 @@ footer a:hover {
 
 .masthead .container > .row {
     animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Staggered card entrance */
-@keyframes cardReveal {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* =====================================================
@@ -952,6 +961,26 @@ footer a:hover {
 
     #contact .col-lg-3::after {
         display: none;
+    }
+
+    #contact .col-lg-3 {
+        padding: 0 1rem;
+    }
+
+    #services .col-lg-3 {
+        padding: 0 8px;
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-section h2,
+    #portfolio h2 {
+        font-size: 1.6rem !important;
+    }
+
+    #services .col-lg-3 > .mt-5 {
+        padding: 2rem 1.5rem !important;
     }
 }
 
@@ -980,18 +1009,22 @@ footer a:hover {
     #contact {
         padding: 4rem 0 !important;
     }
+
+    #services .col-lg-3 > .mt-5 {
+        padding: 1.8rem 1.4rem !important;
+    }
 }
 
 /* =====================================================
    MOBILE HAMBURGER MENU
    ===================================================== */
 #mainNav .navbar-toggler {
-    border-color: rgba(0, 212, 170, 0.2);
+    border-color: rgba(255, 255, 255, 0.15);
     padding: 0.5rem;
 }
 
 #mainNav .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 212, 170, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(230, 237, 243, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 #mainNav .navbar-toggler:focus {
@@ -1002,20 +1035,20 @@ footer a:hover {
    LIGHT MODE OVERRIDES
    ===================================================== */
 body.light-mode {
-    background-color: #f8f9fb !important;
+    background-color: var(--bg-dark) !important;
 }
 
 body.light-mode::after {
-    opacity: 0.015;
+    opacity: 0.01;
 }
 
 body.light-mode #mainNav {
-    background: rgba(248, 249, 251, 0.92) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    background: var(--glass-bg) !important;
+    border-bottom: 1px solid var(--glass-border);
 }
 
 body.light-mode #mainNav.navbar-shrink {
-    background: rgba(248, 249, 251, 0.97) !important;
+    background: rgba(247, 248, 250, 0.97) !important;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -1024,11 +1057,12 @@ body.light-mode #mainNav .nav-link {
 }
 
 body.light-mode #mainNav .nav-link:hover {
-    color: var(--primary) !important;
+    color: var(--text-primary) !important;
+    background: rgba(0, 0, 0, 0.04);
 }
 
 body.light-mode .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(10, 14, 20, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(16, 21, 32, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 body.light-mode .page-section.bg-primary {
@@ -1036,35 +1070,40 @@ body.light-mode .page-section.bg-primary {
 }
 
 body.light-mode .page-section.bg-dark {
-    background: #f0f2f5 !important;
+    background: var(--bg-card) !important;
 }
 
 body.light-mode #services {
-    background: #f8f9fb !important;
+    background: var(--bg-dark) !important;
 }
 
 body.light-mode #services .col-lg-3 > .mt-5 {
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.04);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
 body.light-mode #services .col-lg-3 > .mt-5:hover {
     background: #ffffff;
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
-    border-color: rgba(0, 212, 170, 0.2);
+    border-color: rgba(0, 0, 0, 0.06);
 }
 
 body.light-mode #portfolio {
-    background: #f8f9fb !important;
+    background: #ffffff !important;
 }
 
 body.light-mode .portfolio-box {
     border-color: rgba(0, 0, 0, 0.06);
 }
 
+body.light-mode .portfolio-box:hover {
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
 body.light-mode #contact {
-    background: #f8f9fb !important;
+    background: #ffffff !important;
 }
 
 body.light-mode #contact a {
@@ -1072,8 +1111,8 @@ body.light-mode #contact a {
 }
 
 body.light-mode footer.bg-light {
-    background: #ffffff !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    background: var(--bg-dark) !important;
+    border-top: 1px solid var(--glass-border);
 }
 
 body.light-mode footer a {
@@ -1095,7 +1134,9 @@ body.light-mode .btn-light:hover {
 }
 
 body.light-mode .masthead::before {
-    opacity: 0.15;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
 }
 
 /* Light mode mobile nav */

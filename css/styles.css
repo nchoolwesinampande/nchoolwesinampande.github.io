@@ -24,7 +24,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #18d26e;
+  --primary: #5b9cf5;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -159,12 +159,12 @@ sup {
 }
 
 a {
-  color: #18d26e;
+  color: #5b9cf5;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #18d26e;
+  color: #5b9cf5;
   text-decoration: underline;
 }
 
@@ -2457,8 +2457,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #18d26e;
-  border-color: #18d26e;
+  background-color: #5b9cf5;
+  border-color: #5b9cf5;
 }
 .btn-primary:hover {
   color: #fff;
@@ -6067,7 +6067,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #18d26e !important;
+  background-color: #5b9cf5 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6195,7 +6195,7 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-  border-color: #18d26e !important;
+  border-color: #5b9cf5 !important;
 }
 
 .border-secondary {
@@ -9748,11 +9748,11 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #18d26e !important;
+  color: #5b9cf5 !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #d6370c !important;
+  color: #7ab3ff !important;
 }
 
 .text-secondary {
@@ -9959,7 +9959,7 @@ html {
 hr.divider {
   max-width: 3.25rem;
   border-width: 0.2rem;
-  border-color: #18d26e;
+  border-color: #5b9cf5;
 }
 
 hr.light {
@@ -10001,10 +10001,10 @@ hr.light {
   padding: 0.75rem 0;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #18d26e;
+  color: #5b9cf5;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #18d26e !important;
+  color: #5b9cf5 !important;
 }
 @media (min-width: 992px) {
   #mainNav {
@@ -10035,13 +10035,13 @@ hr.light {
     color: #212529;
   }
   #mainNav.navbar-scrolled .navbar-brand:hover {
-    color: #18d26e;
+    color: #5b9cf5;
   }
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link {
     color: #212529;
   }
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
-    color: #18d26e;
+    color: #5b9cf5;
   }
 }
 
@@ -10153,7 +10153,7 @@ header.masthead h1 {
   list-style-type: none;
 }
 .fa-check-circle {
-  color: #18d26e;
+  color: #5b9cf5;
 }
 
 /* Add this CSS */
