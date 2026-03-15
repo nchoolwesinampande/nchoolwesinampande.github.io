@@ -742,12 +742,17 @@ header.masthead:not(.x) {
 #services .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #services .col-lg-3 {
     padding: 0 12px;
     margin-bottom: 24px;
     display: flex;
+}
+
+#services .col-lg-3 > .mt-5 {
+    width: 100%;
 }
 
 /* =====================================================
@@ -1028,23 +1033,49 @@ footer a:hover {
         padding: 0 1rem;
     }
 
+    /* Tablet: 2 cards per row, centered */
+    #services .container {
+        max-width: 700px;
+    }
+
+    #services .row {
+        justify-content: center;
+    }
+
     #services .col-lg-3 {
-        padding: 0 8px;
-        margin-bottom: 16px;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 10px;
+        margin-bottom: 20px;
     }
 
     .topo-contour--1 { width: 300px; height: 300px; }
     .topo-contour--3 { width: 350px; height: 250px; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .page-section h2,
     #portfolio h2 {
         font-size: 1.6rem !important;
     }
 
+    /* Mobile: single column, full width, centered */
+    #services .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    #services .col-lg-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: 16px;
+    }
+
     #services .col-lg-3 > .mt-5 {
         padding: 2rem 1.5rem !important;
+        margin: 0 auto;
+        max-width: 400px;
     }
 
     .topo-coord { display: none; }
@@ -1076,8 +1107,13 @@ footer a:hover {
         padding: 4rem 0 !important;
     }
 
+    #services .container {
+        padding: 0 16px;
+    }
+
     #services .col-lg-3 > .mt-5 {
         padding: 1.8rem 1.4rem !important;
+        max-width: 100%;
     }
 
     .topo-contour { display: none; }
