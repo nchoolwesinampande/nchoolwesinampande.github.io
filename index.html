@@ -21,9 +21,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/styles.css?v=2" rel="stylesheet" />
     <!-- Custom Modern Theme -->
-    <link href="css/custom.css" rel="stylesheet" />
+    <link href="css/custom.css?v=2" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -59,42 +59,35 @@
         </div>
     </nav>
 
-    <!-- Hero Carousel Section -->
-    <header class="masthead" id="heroCarousel">
-        <!-- Background Carousel -->
-        <div id="heroBackgroundCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
-            <ol class="carousel-indicators">
-                <li data-target="#heroBackgroundCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#heroBackgroundCarousel" data-slide-to="1"></li>
-                <li data-target="#heroBackgroundCarousel" data-slide-to="2"></li>
-                <li data-target="#heroBackgroundCarousel" data-slide-to="3"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="hero-slide" style="background-image: url('images/hero-1.png');"></div>
-                </div>
-                <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: url('images/hero-2.png');"></div>
-                </div>
-                <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: url('images/hero-3.png');"></div>
-                </div>
-                <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: url('images/hero-4.png');"></div>
-                </div>
-            </div>
-            <!-- Controls -->
-            <a class="carousel-control-prev" href="#heroBackgroundCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#heroBackgroundCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+    <!-- Hero Section — CSS-only Cartographic Background -->
+    <header class="masthead">
+        <!-- Animated topo background layers -->
+        <div class="hero-topo">
+            <div class="topo-grid"></div>
+            <div class="topo-contour topo-contour--1"></div>
+            <div class="topo-contour topo-contour--2"></div>
+            <div class="topo-contour topo-contour--3"></div>
+            <div class="topo-contour topo-contour--4"></div>
+            <div class="topo-contour topo-contour--5"></div>
+            <div class="topo-dot topo-dot--1"></div>
+            <div class="topo-dot topo-dot--2"></div>
+            <div class="topo-dot topo-dot--3"></div>
+            <div class="topo-dot topo-dot--4"></div>
+            <div class="topo-dot topo-dot--5"></div>
+            <div class="topo-dot topo-dot--6"></div>
+            <div class="topo-dot topo-dot--7"></div>
+            <div class="topo-dot topo-dot--8"></div>
+            <div class="topo-line topo-line--1"></div>
+            <div class="topo-line topo-line--2"></div>
+            <div class="topo-line topo-line--3"></div>
+            <div class="topo-coord topo-coord--1">48.8566° N</div>
+            <div class="topo-coord topo-coord--2">36.8219° S</div>
+            <div class="topo-coord topo-coord--3">1.2921° S</div>
+            <div class="topo-coord topo-coord--4">-17.8292° E</div>
+            <div class="hero-gradient-mesh"></div>
         </div>
 
-        <!-- Hero Content Overlay -->
+        <!-- Hero Content -->
         <div class="hero-content">
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center text-center">
@@ -107,14 +100,10 @@
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 font-weight-light mb-5">
                             I'm <strong class="hero-name">Nchoolwe Progress Sinampande</strong>, a Geospatial Technology
-                            and
-                            Information
-                            Management Consultant with
+                            and Information Management Consultant with
                             over 5 years of experience in the humanitarian and development sector. I currently support
-                            IOM
-                            Kenya on the Saameynta Joint Programme and have previously served with Norwegian People's
-                            Aid
-                            and Chinhoyi University of Technology. I help organisations transform spatial data into
+                            IOM Kenya on the Saameynta Joint Programme and have previously served with Norwegian People's
+                            Aid and Chinhoyi University of Technology. I help organisations transform spatial data into
                             strategic decisions through custom GIS solutions, M&E systems, and data visualisation.
                         </p>
                         <a class="btn btn-primary btn-xl js-scroll-trigger" href="#portfolio">View My Work</a>
