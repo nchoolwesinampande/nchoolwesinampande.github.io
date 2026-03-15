@@ -459,14 +459,17 @@
             });
 
             function setTheme(theme) {
+                var logo = document.querySelector('.navbar-logo');
                 if (theme === 'light') {
                     body.classList.add('light-mode');
                     document.getElementById('lightIcon').style.display = 'none';
                     document.getElementById('darkIcon').style.display = 'inline-block';
+                    if (logo) logo.src = 'assets/logos/logo-full-light.svg';
                 } else {
                     body.classList.remove('light-mode');
                     document.getElementById('lightIcon').style.display = 'inline-block';
                     document.getElementById('darkIcon').style.display = 'none';
+                    if (logo) logo.src = 'assets/logos/logo-full-dark.svg';
                 }
             }
         })();
