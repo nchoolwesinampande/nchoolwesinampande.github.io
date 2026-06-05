@@ -82,6 +82,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#casestudy">Case Study</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link"
                             href="https://experience.arcgis.com/experience/de3a269031e145af800ae7b5d9234b60/"
@@ -262,10 +263,54 @@
 
     <!-- Portfolio-->
     <section id="portfolio">
-        <div class="container-fluid p-0">
-            <h2 class="text-center mb-4 pt-5">Featured Work</h2>
-            <div class="row no-gutters">
-                <div class="col-lg-4 col-sm-6">
+        <div class="container">
+            <h2 class="text-center mb-2 pt-5">Featured Work</h2>
+            <p class="text-center text-muted mb-4">A selection of dashboards, maps, and data tools I've built</p>
+
+            <!-- Filter Buttons -->
+            <div class="portfolio-filter text-center mb-4">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="dashboards">Dashboards</button>
+                <button class="filter-btn" data-filter="cartography">Cartography</button>
+                <button class="filter-btn" data-filter="webdata">Web & Data</button>
+            </div>
+
+            <div class="row">
+                <!-- NEW: Beneficiary Displacement Dashboard (Live) -->
+                <div class="col-lg-4 col-sm-6 portfolio-item" data-category="dashboards">
+                    <a class="portfolio-box portfolio-box--link" href="https://displacement-dashboard-ktaka2qcxc43i9pgswgxnp.streamlit.app/" target="_blank" rel="noopener">
+                        <span class="live-badge"><i class="fas fa-external-link-alt"></i> Live</span>
+                        <img class="img-fluid" src="assets/img/portfolio/beneficiary-displacement-dashboard.png" alt="Beneficiary Displacement Dashboard" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Python Streamlit Dashboard</div>
+                            <div class="project-name">Beneficiary Solutions & Displacement Dashboard</div>
+                        </div>
+                    </a>
+                </div>
+                <!-- NEW: Clinic R Dashboard (Live) -->
+                <div class="col-lg-4 col-sm-6 portfolio-item" data-category="dashboards">
+                    <a class="portfolio-box portfolio-box--link" href="https://1fsqxs-snaps-micro0s.shinyapps.io/mch_ims/" target="_blank" rel="noopener">
+                        <span class="live-badge"><i class="fas fa-external-link-alt"></i> Live</span>
+                        <img class="img-fluid" src="assets/img/portfolio/clinic-r-dashboard.png" alt="Clinic Information Management System" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">R Shiny Dashboard</div>
+                            <div class="project-name">Clinic Information Management System</div>
+                        </div>
+                    </a>
+                </div>
+                <!-- NEW: Land Release ArcGIS (Live) -->
+                <div class="col-lg-4 col-sm-6 portfolio-item" data-category="dashboards">
+                    <a class="portfolio-box portfolio-box--link" href="https://experience.arcgis.com/experience/de3a269031e145af800ae7b5d9234b60/page/ArcGIS-Dashboard?views=Daily-Statistics" target="_blank" rel="noopener">
+                        <span class="live-badge"><i class="fas fa-external-link-alt"></i> Live</span>
+                        <img class="img-fluid" src="assets/img/portfolio/land-release-arcgis.png" alt="Land Release Dashboard" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">ArcGIS Dashboard</div>
+                            <div class="project-name">Land Release & Mine Clearance Dashboard</div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Existing: Zimbabwe NPA Dashboard -->
+                <div class="col-lg-4 col-sm-6 portfolio-item" data-category="dashboards">
                     <a class="portfolio-box" href="images/img.png">
                         <img class="img-fluid" src="images/img.png" alt="Zimbabwe NPA Dashboard" />
                         <div class="portfolio-box-caption">
@@ -274,7 +319,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <!-- Existing: Progress Mapping -->
+                <div class="col-lg-4 col-sm-6 portfolio-item" data-category="dashboards">
                     <a class="portfolio-box" href="images/img_1.png">
                         <img class="img-fluid" src="images/img_1.png" alt="ArcGIS MapViewer" />
                         <div class="portfolio-box-caption">
@@ -283,7 +329,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <!-- Existing: Medical Routes -->
+                <div class="col-lg-4 col-sm-6 portfolio-item" data-category="cartography">
                     <a class="portfolio-box" href="images/medevac.png">
                         <img class="img-fluid" src="images/medevac.png" alt="Medical Routes Map" />
                         <div class="portfolio-box-caption">
@@ -292,7 +339,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <!-- Existing: R Visualization -->
+                <div class="col-lg-4 col-sm-6 portfolio-item" data-category="webdata">
                     <a class="portfolio-box" href="images/Rplot.png">
                         <img class="img-fluid" src="images/Rplot.png" alt="R Visualization" />
                         <div class="portfolio-box-caption">
@@ -301,7 +349,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <!-- Existing: Excel Dashboards -->
+                <div class="col-lg-4 col-sm-6 portfolio-item" data-category="webdata">
                     <a class="portfolio-box" href="images/img_2.png">
                         <img class="img-fluid" src="images/img_2.png" alt="Excel Dashboard" />
                         <div class="portfolio-box-caption">
@@ -310,13 +359,135 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <!-- Existing: Web Map -->
+                <div class="col-lg-4 col-sm-6 portfolio-item" data-category="webdata">
                     <a class="portfolio-box" href="images/webmap.png">
                         <img class="img-fluid" src="images/webmap.png" alt="Web Map" />
-                        <div class="portfolio-box-caption p-3">
+                        <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">GIS Web Mapping</div>
                             <div class="project-name">Interactive Web Map with Leaflet & Mapbox</div>
                         </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study: Wanlawayn Urban Planning -->
+    <section id="casestudy" class="page-section">
+        <div class="container">
+            <div class="casestudy-header">
+                <span class="casestudy-label">Case Study</span>
+                <h2>Wanlawayn Urban Profile</h2>
+                <hr class="divider my-4" />
+            </div>
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <p class="casestudy-text">
+                        A comprehensive spatial analysis supporting urban planning in <strong>Wanlawayn, Somalia</strong>,
+                        produced for the <strong>Danwadaag Consortium</strong>.
+                    </p>
+                    <p class="casestudy-text">
+                        This project produced 10 thematic maps covering land use classification, population density,
+                        urban growth patterns (2017-2025), drought vulnerability, health facility access,
+                        and infrastructure mapping &mdash; helping local authorities make data-driven planning decisions.
+                    </p>
+                    <div class="casestudy-tags">
+                        <span class="cs-tag">ArcGIS Pro</span>
+                        <span class="cs-tag">Remote Sensing</span>
+                        <span class="cs-tag">Urban Planning</span>
+                        <span class="cs-tag">Spatial Analysis</span>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <a class="casestudy-hero" href="assets/img/casestudy/wanlawayn-neighbourhoods-map.png">
+                        <img src="assets/img/casestudy/wanlawayn-neighbourhoods-map.png" alt="Wanlawayn Neighbourhoods Map" class="img-fluid casestudy-hero-img" />
+                    </a>
+                </div>
+            </div>
+
+            <!-- Horizontal Scroll Gallery -->
+            <div class="scroll-gallery-wrapper">
+                <button class="scroll-btn scroll-btn--left" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+                <div class="scroll-gallery" id="csGallery">
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-lulc-potrait.png">
+                        <img src="assets/img/casestudy/wanlawayn-urban-lulc-potrait.png" alt="Land Use Land Cover" />
+                        <span class="cs-card-title">Land Use & Land Cover</span>
+                    </a>
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-population-density-protrait.png">
+                        <img src="assets/img/casestudy/wanlawayn-population-density-protrait.png" alt="Population Density" />
+                        <span class="cs-card-title">Population Density</span>
+                    </a>
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-growth-2017---2025-potrait.png">
+                        <img src="assets/img/casestudy/wanlawayn-urban-growth-2017---2025-potrait.png" alt="Urban Growth 2017-2025" />
+                        <span class="cs-card-title">Urban Growth 2017-2025</span>
+                    </a>
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-drought-map-potrait.png">
+                        <img src="assets/img/casestudy/wanlawayn-urban-drought-map-potrait.png" alt="Drought Vulnerability" />
+                        <span class="cs-card-title">Drought Vulnerability</span>
+                    </a>
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-facilities-map-potrait.png">
+                        <img src="assets/img/casestudy/wanlawayn-urban-facilities-map-potrait.png" alt="Urban Facilities" />
+                        <span class="cs-card-title">Urban Facilities</span>
+                    </a>
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-morphology-potrait.png">
+                        <img src="assets/img/casestudy/wanlawayn-urban-morphology-potrait.png" alt="Urban Morphology" />
+                        <span class="cs-card-title">Urban Morphology</span>
+                    </a>
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-annual-precipitation-potrait.png">
+                        <img src="assets/img/casestudy/wanlawayn-annual-precipitation-potrait.png" alt="Annual Precipitation" />
+                        <span class="cs-card-title">Annual Precipitation</span>
+                    </a>
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-distance-to-health-potrait.png">
+                        <img src="assets/img/casestudy/wanlawayn-urban-distance-to-health-potrait.png" alt="Distance to Health" />
+                        <span class="cs-card-title">Distance to Health Facilities</span>
+                    </a>
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-population-per-hectare-potrait.png">
+                        <img src="assets/img/casestudy/wanlawayn-population-per-hectare-potrait.png" alt="Population per Hectare" />
+                        <span class="cs-card-title">Population per Hectare</span>
+                    </a>
+                </div>
+                <button class="scroll-btn scroll-btn--right" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="page-section">
+        <div class="container">
+            <h2 class="text-center mb-2">Publications & Documents</h2>
+            <p class="text-center text-muted mb-5">Reports and infosheets from humanitarian programmes I've contributed to</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a class="pub-card" href="files/Saameynta Infosheet.pdf" target="_blank" rel="noopener">
+                        <div class="pub-card-icon"><i class="fas fa-file-pdf"></i></div>
+                        <h5 class="pub-card-title">Saameynta Infosheet</h5>
+                        <p class="pub-card-desc">Programme overview for the Saameynta Joint Programme in Somalia</p>
+                        <span class="pub-card-action">View Document <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a class="pub-card" href="files/Data for Solutions Infosheet.pdf" target="_blank" rel="noopener">
+                        <div class="pub-card-icon"><i class="fas fa-file-pdf"></i></div>
+                        <h5 class="pub-card-title">Data for Solutions</h5>
+                        <p class="pub-card-desc">Information management and data solutions for humanitarian response</p>
+                        <span class="pub-card-action">View Document <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a class="pub-card" href="files/DSP Key Findings Phase.pdf" target="_blank" rel="noopener">
+                        <div class="pub-card-icon"><i class="fas fa-file-pdf"></i></div>
+                        <h5 class="pub-card-title">DSP Key Findings</h5>
+                        <p class="pub-card-desc">Key findings from the Durable Solutions Programme research phase</p>
+                        <span class="pub-card-action">View Document <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a class="pub-card" href="files/puntland_social-cohesion-strategy_2025-final.pdf" target="_blank" rel="noopener">
+                        <div class="pub-card-icon"><i class="fas fa-file-pdf"></i></div>
+                        <h5 class="pub-card-title">Puntland Social Cohesion Strategy</h5>
+                        <p class="pub-card-desc">Strategic framework for social cohesion in Puntland, 2025</p>
+                        <span class="pub-card-action">View Document <i class="fas fa-arrow-right"></i></span>
                     </a>
                 </div>
             </div>
@@ -463,7 +634,7 @@
     <script>
         (function () {
             const revealElements = document.querySelectorAll(
-                '.page-section, #portfolio .col-lg-4, #services .col-lg-3'
+                '.page-section, #portfolio .portfolio-item, #services .col-lg-3, .casestudy-card, .pub-card'
             );
             const observer = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry, i) {
@@ -478,6 +649,49 @@
                 el.classList.add('reveal');
                 observer.observe(el);
             });
+        })();
+    </script>
+
+    <!-- Portfolio Filter -->
+    <script>
+        (function () {
+            var filterBtns = document.querySelectorAll('.filter-btn');
+            var items = document.querySelectorAll('.portfolio-item');
+            filterBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    filterBtns.forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    var filter = btn.getAttribute('data-filter');
+                    items.forEach(function (item) {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.classList.remove('portfolio-hidden');
+                        } else {
+                            item.classList.add('portfolio-hidden');
+                        }
+                    });
+                });
+            });
+        })();
+    </script>
+
+    <!-- Case Study Gallery Scroll -->
+    <script>
+        (function () {
+            var gallery = document.getElementById('csGallery');
+            if (!gallery) return;
+            var leftBtn = gallery.parentElement.querySelector('.scroll-btn--left');
+            var rightBtn = gallery.parentElement.querySelector('.scroll-btn--right');
+            var scrollAmount = 320;
+            if (leftBtn) {
+                leftBtn.addEventListener('click', function () {
+                    gallery.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
+            }
+            if (rightBtn) {
+                rightBtn.addEventListener('click', function () {
+                    gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
+            }
         })();
     </script>
 

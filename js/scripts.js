@@ -44,8 +44,24 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-  // Magnific popup calls
+  // Magnific popup calls — exclude live external links
   $('#portfolio').magnificPopup({
+    delegate: 'a:not(.portfolio-box--link)',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1]
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+    }
+  });
+
+  // Case study gallery lightbox
+  $('#csGallery').magnificPopup({
     delegate: 'a',
     type: 'image',
     tLoading: 'Loading image #%curr%...',
@@ -58,6 +74,12 @@
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
+  });
+
+  // Case study hero lightbox (also opens into gallery)
+  $('.casestudy-hero').magnificPopup({
+    type: 'image',
+    mainClass: 'mfp-img-mobile'
   });
 
 })(jQuery); // End of use strict
