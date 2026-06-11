@@ -60,9 +60,9 @@
     }
   });
 
-  // Case study gallery lightbox
-  $('#csGallery').magnificPopup({
-    delegate: 'a',
+  // Case study lightbox — hero + gallery cards share one gallery
+  $('#casestudy').magnificPopup({
+    delegate: 'a.casestudy-hero, a.casestudy-card',
     type: 'image',
     tLoading: 'Loading image #%curr%...',
     mainClass: 'mfp-img-mobile',
@@ -74,12 +74,6 @@
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
-  });
-
-  // Case study hero lightbox (also opens into gallery)
-  $('.casestudy-hero').magnificPopup({
-    type: 'image',
-    mainClass: 'mfp-img-mobile'
   });
 
 })(jQuery); // End of use strict

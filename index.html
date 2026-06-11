@@ -51,9 +51,10 @@
     <title>Nchoolwe Progress Sinampande | Geospatial & IM Consultant</title>
     <!-- Favicon-->
     <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome icons (CSS version only — the JS/SVG build is redundant) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Google fonts-->
     <link
         href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap"
@@ -62,9 +63,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css?v=2" rel="stylesheet" />
+    <link href="css/styles.css?v=3" rel="stylesheet" />
     <!-- Custom Modern Theme -->
-    <link href="css/custom.css?v=2" rel="stylesheet" />
+    <link href="css/custom.css?v=3" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -83,13 +84,11 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#casestudy">Case Study</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link"
-                            href="https://experience.arcgis.com/experience/de3a269031e145af800ae7b5d9234b60/"
-                            target="_blank" title="Live Dashboard">Live Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link"
-                            href="https://www.linkedin.com/in/nchoolwe-sinampande-948a3b1a8/" target="_blank"><i
-                                class="fab fa-linkedin"></i></a></li>
+                            href="https://www.linkedin.com/in/nchoolwe-sinampande-948a3b1a8/" target="_blank"
+                            rel="noopener" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a></li>
                     <li class="nav-item">
                         <button class="theme-toggle nav-link" id="themeToggle" title="Toggle Dark/Light Mode">
                             <i class="fas fa-sun" id="lightIcon"></i>
@@ -122,10 +121,10 @@
             <div class="topo-line topo-line--1"></div>
             <div class="topo-line topo-line--2"></div>
             <div class="topo-line topo-line--3"></div>
-            <div class="topo-coord topo-coord--1">48.8566° N</div>
-            <div class="topo-coord topo-coord--2">36.8219° S</div>
+            <div class="topo-coord topo-coord--1">15.3875° S</div>
+            <div class="topo-coord topo-coord--2">36.8219° E</div>
             <div class="topo-coord topo-coord--3">1.2921° S</div>
-            <div class="topo-coord topo-coord--4">-17.8292° E</div>
+            <div class="topo-coord topo-coord--4">17.8292° S</div>
             <div class="hero-gradient-mesh"></div>
         </div>
 
@@ -148,7 +147,10 @@
                             Aid and Chinhoyi University of Technology. I help organisations transform spatial data into
                             strategic decisions through custom GIS solutions, M&E systems, and data visualisation.
                         </p>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#portfolio">View My Work</a>
+                        <div class="hero-cta-group">
+                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#portfolio">View My Work</a>
+                            <a class="btn btn-outline-hero btn-xl js-scroll-trigger" href="#contact">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -280,7 +282,7 @@
                 <div class="col-lg-4 col-sm-6 portfolio-item" data-category="dashboards">
                     <a class="portfolio-box portfolio-box--link" href="https://displacement-dashboard-ktaka2qcxc43i9pgswgxnp.streamlit.app/" target="_blank" rel="noopener">
                         <span class="live-badge"><i class="fas fa-external-link-alt"></i> Live</span>
-                        <img class="img-fluid" src="assets/img/portfolio/beneficiary-displacement-dashboard.png" alt="Beneficiary Displacement Dashboard" />
+                        <img class="img-fluid" loading="lazy" src="assets/img/thumbs/beneficiary-displacement-dashboard.webp" alt="Beneficiary Displacement Dashboard" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Python Streamlit Dashboard</div>
                             <div class="project-name">Beneficiary Solutions & Displacement Dashboard</div>
@@ -291,7 +293,7 @@
                 <div class="col-lg-4 col-sm-6 portfolio-item" data-category="dashboards">
                     <a class="portfolio-box portfolio-box--link" href="https://1fsqxs-snaps-micro0s.shinyapps.io/mch_ims/" target="_blank" rel="noopener">
                         <span class="live-badge"><i class="fas fa-external-link-alt"></i> Live</span>
-                        <img class="img-fluid" src="assets/img/portfolio/clinic-r-dashboard.png" alt="Clinic Information Management System" />
+                        <img class="img-fluid" loading="lazy" src="assets/img/thumbs/clinic-r-dashboard.webp" alt="Clinic Information Management System" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">R Shiny Dashboard</div>
                             <div class="project-name">Clinic Information Management System</div>
@@ -302,7 +304,7 @@
                 <div class="col-lg-4 col-sm-6 portfolio-item" data-category="dashboards">
                     <a class="portfolio-box portfolio-box--link" href="https://experience.arcgis.com/experience/de3a269031e145af800ae7b5d9234b60/page/ArcGIS-Dashboard?views=Daily-Statistics" target="_blank" rel="noopener">
                         <span class="live-badge"><i class="fas fa-external-link-alt"></i> Live</span>
-                        <img class="img-fluid" src="assets/img/portfolio/land-release-arcgis.png" alt="Land Release Dashboard" />
+                        <img class="img-fluid" loading="lazy" src="assets/img/thumbs/land-release-arcgis.webp" alt="Land Release Dashboard" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">ArcGIS Dashboard</div>
                             <div class="project-name">Land Release & Mine Clearance Dashboard</div>
@@ -312,7 +314,7 @@
                 <!-- Existing: Zimbabwe NPA Dashboard -->
                 <div class="col-lg-4 col-sm-6 portfolio-item" data-category="dashboards">
                     <a class="portfolio-box" href="images/img.png">
-                        <img class="img-fluid" src="images/img.png" alt="Zimbabwe NPA Dashboard" />
+                        <img class="img-fluid" loading="lazy" src="assets/img/thumbs/img.webp" alt="Zimbabwe NPA Dashboard" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">ArcGIS Dashboard</div>
                             <div class="project-name">Zimbabwe NPA Progress Dashboard</div>
@@ -322,7 +324,7 @@
                 <!-- Existing: Progress Mapping -->
                 <div class="col-lg-4 col-sm-6 portfolio-item" data-category="dashboards">
                     <a class="portfolio-box" href="images/img_1.png">
-                        <img class="img-fluid" src="images/img_1.png" alt="ArcGIS MapViewer" />
+                        <img class="img-fluid" loading="lazy" src="assets/img/thumbs/img_1.webp" alt="ArcGIS MapViewer" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">ArcGIS MapViewer</div>
                             <div class="project-name">Progress Mapping Application</div>
@@ -332,7 +334,7 @@
                 <!-- Existing: Medical Routes -->
                 <div class="col-lg-4 col-sm-6 portfolio-item" data-category="cartography">
                     <a class="portfolio-box" href="images/medevac.png">
-                        <img class="img-fluid" src="images/medevac.png" alt="Medical Routes Map" />
+                        <img class="img-fluid" loading="lazy" src="assets/img/thumbs/medevac.webp" alt="Medical Routes Map" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Cartography</div>
                             <div class="project-name">Medical Facilities Routes Mapping</div>
@@ -342,7 +344,7 @@
                 <!-- Existing: R Visualization -->
                 <div class="col-lg-4 col-sm-6 portfolio-item" data-category="webdata">
                     <a class="portfolio-box" href="images/Rplot.png">
-                        <img class="img-fluid" src="images/Rplot.png" alt="R Visualization" />
+                        <img class="img-fluid" loading="lazy" src="assets/img/thumbs/Rplot.webp" alt="R Visualization" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">R Data Visualisation</div>
                             <div class="project-name">Species Distribution Analysis</div>
@@ -352,7 +354,7 @@
                 <!-- Existing: Excel Dashboards -->
                 <div class="col-lg-4 col-sm-6 portfolio-item" data-category="webdata">
                     <a class="portfolio-box" href="images/img_2.png">
-                        <img class="img-fluid" src="images/img_2.png" alt="Excel Dashboard" />
+                        <img class="img-fluid" loading="lazy" src="assets/img/thumbs/img_2.webp" alt="Excel Dashboard" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Excel Dashboards</div>
                             <div class="project-name">Data Summary & Analytics</div>
@@ -362,7 +364,7 @@
                 <!-- Existing: Web Map -->
                 <div class="col-lg-4 col-sm-6 portfolio-item" data-category="webdata">
                     <a class="portfolio-box" href="images/webmap.png">
-                        <img class="img-fluid" src="images/webmap.png" alt="Web Map" />
+                        <img class="img-fluid" loading="lazy" src="assets/img/thumbs/webmap.webp" alt="Web Map" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">GIS Web Mapping</div>
                             <div class="project-name">Interactive Web Map with Leaflet & Mapbox</div>
@@ -401,7 +403,7 @@
                 </div>
                 <div class="col-lg-7">
                     <a class="casestudy-hero" href="assets/img/casestudy/wanlawayn-neighbourhoods-map.png">
-                        <img src="assets/img/casestudy/wanlawayn-neighbourhoods-map.png" alt="Wanlawayn Neighbourhoods Map" class="img-fluid casestudy-hero-img" />
+                        <img src="assets/img/casestudy/thumbs/wanlawayn-neighbourhoods-map-hero.webp" alt="Wanlawayn Neighbourhoods Map" class="img-fluid casestudy-hero-img" loading="lazy" />
                     </a>
                 </div>
             </div>
@@ -410,40 +412,40 @@
             <div class="scroll-gallery-wrapper">
                 <button class="scroll-btn scroll-btn--left" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
                 <div class="scroll-gallery" id="csGallery">
-                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-lulc-potrait.png">
-                        <img src="assets/img/casestudy/wanlawayn-urban-lulc-potrait.png" alt="Land Use Land Cover" />
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-lulc-portrait.png">
+                        <img loading="lazy" src="assets/img/casestudy/thumbs/wanlawayn-urban-lulc-portrait.webp" alt="Land Use Land Cover" />
                         <span class="cs-card-title">Land Use & Land Cover</span>
                     </a>
-                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-population-density-protrait.png">
-                        <img src="assets/img/casestudy/wanlawayn-population-density-protrait.png" alt="Population Density" />
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-population-density-portrait.png">
+                        <img loading="lazy" src="assets/img/casestudy/thumbs/wanlawayn-population-density-portrait.webp" alt="Population Density" />
                         <span class="cs-card-title">Population Density</span>
                     </a>
-                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-growth-2017---2025-potrait.png">
-                        <img src="assets/img/casestudy/wanlawayn-urban-growth-2017---2025-potrait.png" alt="Urban Growth 2017-2025" />
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-growth-2017-2025-portrait.png">
+                        <img loading="lazy" src="assets/img/casestudy/thumbs/wanlawayn-urban-growth-2017-2025-portrait.webp" alt="Urban Growth 2017-2025" />
                         <span class="cs-card-title">Urban Growth 2017-2025</span>
                     </a>
-                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-drought-map-potrait.png">
-                        <img src="assets/img/casestudy/wanlawayn-urban-drought-map-potrait.png" alt="Drought Vulnerability" />
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-drought-map-portrait.png">
+                        <img loading="lazy" src="assets/img/casestudy/thumbs/wanlawayn-urban-drought-map-portrait.webp" alt="Drought Vulnerability" />
                         <span class="cs-card-title">Drought Vulnerability</span>
                     </a>
-                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-facilities-map-potrait.png">
-                        <img src="assets/img/casestudy/wanlawayn-urban-facilities-map-potrait.png" alt="Urban Facilities" />
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-facilities-map-portrait.png">
+                        <img loading="lazy" src="assets/img/casestudy/thumbs/wanlawayn-urban-facilities-map-portrait.webp" alt="Urban Facilities" />
                         <span class="cs-card-title">Urban Facilities</span>
                     </a>
-                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-morphology-potrait.png">
-                        <img src="assets/img/casestudy/wanlawayn-urban-morphology-potrait.png" alt="Urban Morphology" />
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-morphology-portrait.png">
+                        <img loading="lazy" src="assets/img/casestudy/thumbs/wanlawayn-urban-morphology-portrait.webp" alt="Urban Morphology" />
                         <span class="cs-card-title">Urban Morphology</span>
                     </a>
-                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-annual-precipitation-potrait.png">
-                        <img src="assets/img/casestudy/wanlawayn-annual-precipitation-potrait.png" alt="Annual Precipitation" />
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-annual-precipitation-portrait.png">
+                        <img loading="lazy" src="assets/img/casestudy/thumbs/wanlawayn-annual-precipitation-portrait.webp" alt="Annual Precipitation" />
                         <span class="cs-card-title">Annual Precipitation</span>
                     </a>
-                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-distance-to-health-potrait.png">
-                        <img src="assets/img/casestudy/wanlawayn-urban-distance-to-health-potrait.png" alt="Distance to Health" />
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-urban-distance-to-health-portrait.png">
+                        <img loading="lazy" src="assets/img/casestudy/thumbs/wanlawayn-urban-distance-to-health-portrait.webp" alt="Distance to Health" />
                         <span class="cs-card-title">Distance to Health Facilities</span>
                     </a>
-                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-population-per-hectare-potrait.png">
-                        <img src="assets/img/casestudy/wanlawayn-population-per-hectare-potrait.png" alt="Population per Hectare" />
+                    <a class="casestudy-card" href="assets/img/casestudy/wanlawayn-population-per-hectare-portrait.png">
+                        <img loading="lazy" src="assets/img/casestudy/thumbs/wanlawayn-population-per-hectare-portrait.webp" alt="Population per Hectare" />
                         <span class="cs-card-title">Population per Hectare</span>
                     </a>
                 </div>
@@ -459,7 +461,7 @@
             <p class="text-center text-muted mb-5">Reports and infosheets from humanitarian programmes I've contributed to</p>
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <a class="pub-card" href="files/Saameynta Infosheet.pdf" target="_blank" rel="noopener">
+                    <a class="pub-card" href="files/saameynta-infosheet.pdf" target="_blank" rel="noopener">
                         <div class="pub-card-icon"><i class="fas fa-file-pdf"></i></div>
                         <h5 class="pub-card-title">Saameynta Infosheet</h5>
                         <p class="pub-card-desc">Programme overview for the Saameynta Joint Programme in Somalia</p>
@@ -467,7 +469,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <a class="pub-card" href="files/Data for Solutions Infosheet.pdf" target="_blank" rel="noopener">
+                    <a class="pub-card" href="files/data-for-solutions-infosheet.pdf" target="_blank" rel="noopener">
                         <div class="pub-card-icon"><i class="fas fa-file-pdf"></i></div>
                         <h5 class="pub-card-title">Data for Solutions</h5>
                         <p class="pub-card-desc">Information management and data solutions for humanitarian response</p>
@@ -475,7 +477,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <a class="pub-card" href="files/DSP Key Findings Phase.pdf" target="_blank" rel="noopener">
+                    <a class="pub-card" href="files/dsp-key-findings-phase.pdf" target="_blank" rel="noopener">
                         <div class="pub-card-icon"><i class="fas fa-file-pdf"></i></div>
                         <h5 class="pub-card-title">DSP Key Findings</h5>
                         <p class="pub-card-desc">Key findings from the Durable Solutions Programme research phase</p>
@@ -483,7 +485,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <a class="pub-card" href="files/puntland_social-cohesion-strategy_2025-final.pdf" target="_blank" rel="noopener">
+                    <a class="pub-card" href="files/puntland-social-cohesion-strategy-2025.pdf" target="_blank" rel="noopener">
                         <div class="pub-card-icon"><i class="fas fa-file-pdf"></i></div>
                         <h5 class="pub-card-title">Puntland Social Cohesion Strategy</h5>
                         <p class="pub-card-desc">Strategic framework for social cohesion in Puntland, 2025</p>
@@ -533,7 +535,7 @@
                     <i class="fab fa-linkedin fa-3x mb-3 text-muted"></i>
                     <h5>LinkedIn</h5>
                     <a class="d-block" href="https://www.linkedin.com/in/nchoolwe-sinampande-948a3b1a8"
-                        target="_blank">Connect with me</a>
+                        target="_blank" rel="noopener">Connect with me</a>
                 </div>
             </div>
         </div>
@@ -544,34 +546,46 @@
         <div class="container">
             <div class="small text-center text-muted">
                 <strong>Nchoolwe Progress Sinampande</strong><br>
-                © 2025 | Geospatial Technology & Information Management Consultant
+                © <span id="footerYear">2026</span> | Geospatial Technology & Information Management Consultant
             </div>
         </div>
         <div class="text-center mt-3">
             <a href="https://experience.arcgis.com/experience/de3a269031e145af800ae7b5d9234b60/" target="_blank"
-                class="mx-2" title="Live Dashboard"><i class="fas fa-chart-line fa-2x"></i> <span style="font-size:0.9rem;vertical-align:middle;">Dashboard</span></a>
-            <a href="https://www.linkedin.com/in/nchoolwe-sinampande-948a3b1a8/" target="_blank" class="mx-2"><i
-                    class="fab fa-linkedin fa-2x"></i></a>
-            <a href="mailto:nchoolwesinampande@gmail.com" class="mx-2"><i class="fas fa-envelope fa-2x"></i></a>
+                rel="noopener" class="mx-2" title="Live Dashboard"><i class="fas fa-chart-line fa-2x"></i> <span style="font-size:0.9rem;vertical-align:middle;">Dashboard</span></a>
+            <a href="https://www.linkedin.com/in/nchoolwe-sinampande-948a3b1a8/" target="_blank" rel="noopener"
+                class="mx-2" aria-label="LinkedIn profile"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="mailto:nchoolwesinampande@gmail.com" class="mx-2" aria-label="Email me"><i class="fas fa-envelope fa-2x"></i></a>
         </div>
     </footer>
 
+    <!-- Back to top -->
+    <button id="backToTop" aria-label="Back to top" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+
     <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"
+        integrity="sha512-igl8WEUuas9k5dtnhKqyyld6TzzRjvMqLC79jkgT3z02FvJyHAuUtyemm/P/jYSne1xwFI06ezQxEwweaiV7VA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167744088-1"></script>
+    <!-- Google Analytics 4
+         The old UA-167744088-1 property stopped collecting data when Universal
+         Analytics shut down (July 2023). Create a GA4 property at
+         https://analytics.google.com, then replace G-XXXXXXXXXX below with your
+         Measurement ID and uncomment this block.
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'UA-167744088-1');
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
+    -->
 
     <!-- Typing Animation -->
     <script>
@@ -692,6 +706,27 @@
                     gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
                 });
             }
+        })();
+    </script>
+
+    <!-- Footer Year + Back to Top -->
+    <script>
+        (function () {
+            var yearEl = document.getElementById('footerYear');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            var topBtn = document.getElementById('backToTop');
+            if (!topBtn) return;
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 600) {
+                    topBtn.classList.add('show');
+                } else {
+                    topBtn.classList.remove('show');
+                }
+            }, { passive: true });
+            topBtn.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
         })();
     </script>
 
