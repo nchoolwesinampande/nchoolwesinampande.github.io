@@ -1269,6 +1269,63 @@ header.masthead:not(.x) {
     font-weight: 300;
 }
 
+/* — Certification chips — */
+.cert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cert-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.85rem 1.3rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    text-align: left;
+    max-width: 320px;
+}
+
+.cert-chip:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.cert-chip i {
+    color: var(--accent);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.cert-chip-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+}
+
+.cert-chip-text strong {
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.cert-chip-text small {
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-weight: 300;
+}
+
 /* =====================================================
    CONTACT SECTION
    ===================================================== */
